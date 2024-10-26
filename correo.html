@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Correo con EmailJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <link rel="stylesheet" href="../estilos/gmail.css">
+</head>
+<body>
+    <button class="back" onclick="window.location.href='prueba2.php';">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANJJREFUSEvl1EFqAkEQRuHPQwR0n4BnEEFPIWQteB1xLXgYBW/gwo17IYcIBVEamRmnOzMLcdY971X9XdUDPX+DnvneRzDEN9a5kbaJKOAHfGKFbY7kmSCFXzDBtStBCj9jlguPQuo6eIRP8ZNT+e1sleADx7/Mo/JieFUHAd9jjBPmpZVXdZDCS9JI/7knk0bUuyAqSCX/zr9uijqV1I1pZ5PUtMmd7ELOU1G0zc8EcU/RSezGF5bY5cxwG0HwRlhgkwNveotyObXn23ZQLHx9wS8QNSYZP6YqMAAAAABJRU5ErkJggg==" class="img-back">
+    </button>
+    <h1>Enviar Correo</h1>
+    <textarea id="message" placeholder="Mensaje" required></textarea>
+    <button id="sendEmail">Enviar Correo</button>
+    <div id="response" style="margin-top: 20px;"></div>
+
+    <script>
+        (function() {
+            emailjs.init("QBA8FFJuOsds4jjsn"); // Usando tu Public Key
+        })();
+
+        document.getElementById('sendEmail').onclick = function() {
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const templateParams = {
+                to_email: '23040070@alumno.utc.edu.mx', // El destinatario
+                subject: subject,
+                message: message
+            };
+
+            emailjs.send('service_7xw0n9l', 'template_icuyfsf', templateParams)
+                .then(function(response) {
+                    document.getElementById('response').innerText = 'Correo enviado exitosamente!';
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    document.getElementById('response').innerText = 'Error al enviar el correo: ' + JSON.stringify(error);
+                    console.log('FAILED...', error);
+                });
+        };
+    </script>
+</body>
+</html>

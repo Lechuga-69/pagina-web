@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt A Puppy!</title>
+    <link rel="stylesheet" href="DPP.css">
+    <link rel="stylesheet" href="DEC.css">
+    <link rel="stylesheet" href="BOT.css">
+<header style="text-align: center;">
+    <img src="img/toby-fox.gif" alt="DOG" class="rightd">
+    <img src="img/toby-fox.gif" alt="DOG" class="leftd"> 
+        <h1 class="TXT-DX"> Adopt A Puppy! </h1>
+    <p>¿Buscas algun perro en especifico?</p>
+    <div class="cont-bot">
+        <button class="bot" onclick="window.location.href='IS.html'">Iniciar Sesión</button>
+    
+        <div id="paypal-button-container" class='cont-bot' style=" width: 200px;">
+        </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=AayJoC8bv79OnaGQZUxzyabdPGUIT4_6Zw0MSk_NBO8UfjJ5VnAYU82F6zvU1BVWu4KNRFxQUldcqopy&currency=USD"></script>
+        <script>
+            paypal.Buttons({
+                style: {
+                    layout: 'vertical',
+                    color: 'blue',
+                    shape: 'rect',
+                    label: 'donate'
+                },
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '00.50' // Monto inicial de la donación
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Gracias por tu donación, ' + details.payer.name.given_name + '!');
+                    });
+                },
+                onCancel: function (data) {
+                    alert('Donación cancelada');
+                },
+                onError: function (err) {
+                    console.error('Ocurrió un error durante la transacción', err);
+                }
+            }).render('#paypal-button-container');
+        </script>
+        <button class="bot" onclick="window.location.href='RU.html'">Registrarme</button>
+        </div>
+    </div>
+</header>
+</head>
+<body>
+    
+    <div class="txtrell3">
+        <p>¿Eres administrador? <br> inicia sesion aqui!</p>
+        <a href="formad.html" class="hapdog"></a>
+    </div class="txtrell3">
+    <br>
+     <div class="txtrellp" style="align-self: center">
+    <h3 style="text-align: center;">¿Por que adoptar a un perro?</h3>
+    <p>Adoptar un perro es una decisión que puede cambiar tu vida y la de tu nuevo compañero de maneras sorprendentes. Cada año, millones de perros en refugios y centros de rescate esperan encontrar un hogar. Al elegir adoptar, no solo le das una segunda oportunidad a un animal necesitado, sino que también experimentas una serie de beneficios emocionales, físicos y sociales.</p>
+     </div>
+ 
+    <div id="map" class="txtrell2"> 
+        <script src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxwDM7oXvT-Qkjze5NeYwP22mWDJiV2YI&callback=iniciarMap"></script>
+    </div>
+    <br>
+    <a class="a txtrellp2" href="https://wa.me/528444121300?text=Hola,%20me%20interesa%20el%20servicio%20antirrábico" target="_blank" class="info-button">Contactar al centro Antirrábico Saltillo</a>
+    <div style="text-align: center; align-content: center;">
+</body>
+</html>

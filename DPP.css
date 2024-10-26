@@ -1,0 +1,213 @@
+@font-face {
+    font-family:'Fixedsys';
+    src: url(FSYS.ttf) format('truetype');
+}
+
+header {
+    text-align: center;
+    background-color: rgb(254, 249, 171);
+    color: rgb(0, 0, 0);
+    font-family: 'Fixedsys', monospace;
+    font-size: 50px;
+    padding: .1px 0px;
+    position: relative;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(img/dog.jpg);
+    background-size: 75px 75px;
+    background-repeat: repeat;
+    animation: moveBackground 5s linear infinite;
+    font-family: 'Fixedsys', monospace;
+}
+
+.bodyreg {
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Fixedsys', monospace;
+            text-align: center;
+            align-content: center;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px 300px; /* Ajusta los valores para controlar la dirección y velocidad */
+    }
+}
+
+.txtrell {
+    color: rgb(0, 0, 0);
+    font-family: 'Fixedsys';
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 650px;
+    height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    align-items: center;
+}
+
+
+
+.txtrell::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.txtrellp {
+    color: rgb(0, 0, 0);
+    font-family: 'Fixedsys';
+    display: inline-block;
+    position: absolute;
+    left: 425px;
+    width: 650px;
+    height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    align-items: center;
+}
+
+
+
+.txtrellp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+
+.txtrell2 {
+    color: rgb(0, 0, 0);
+    font-family: 'Fixedsys';
+    display: inline-block;
+    position: relative;
+    right: 0;
+    width: 350px;
+    height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    align-items: center;
+}
+
+.txtrell2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.txtrell3 {
+    font-size: 17px;
+    font-family:'Fixedsys'; 
+    color: #000000; 
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.txtrell3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 158, 226);
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.com {
+    font-size: 17px; /* Tamaño más pequeño que el texto normal */
+    font-family:'Fixedsys'; /* Opcional, estilo cursiva para parecer más literario */
+    color: #000000; /* Color más suave */
+    padding-left: 15px; /* Sangría para alejar el texto de la línea */
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.com::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 158, 226);
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.a {
+    background-color: #000000;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    /* Añade un efecto bonito al pasarle el mouse a los links tambien en el footer */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.a:hover{
+    background-color: #ffffff;
+    color:#000000
+}
+
+.txtrellp2 {
+    font-family: 'Fixedsys';
+    display: inline-block;
+    position: absolute;
+    left: 425px;
+    width: 650px;
+    height: 25px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    align-items: center;
+}

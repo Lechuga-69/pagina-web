@@ -1,0 +1,27 @@
+.cont-bot {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.bot {
+    background-color: rgb(254, 249, 171);
+    font-family: 'Fixedsys', monospace;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    height: 50px;
+    position: sticky;
+    z-index: 1000;
+}
+
+.bot:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    color:aliceblue
+}
+
+.bot:active {
+    background-color: #022d5b; 
+    transform: scale(0.95);
+}

@@ -1,0 +1,56 @@
+.TXT-DX {
+    font-weight: bold;
+    background: url('img/rain.gif') repeat; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    float: none;
+    text-align: center;
+}
+
+.leftd {
+    position: absolute;
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.rightd {
+    position: absolute;
+    right: 0;
+    transform: scaleX(1);
+}
+
+.hapdog {
+    background-image: url(img/hapdog.gif);
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    margin: 0px;
+    position: relative;
+}
+
+.hapdog:hover {
+    background-image: url(img/hapdog.gif);
+    transform: scaleX(-1) scale(1.05);
+    cursor: pointer;
+    
+}
+
+.hapdog:active {
+    transform: scale(0.95);
+}
+
+.hapdog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(238, 238, 238);
+    opacity: 0.25; 
+    z-index: -1; 
+}
+
